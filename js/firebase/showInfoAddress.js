@@ -185,19 +185,20 @@ var suggestShow = function () {
   let dataSuggest = document.getElementById("data-suggest");
   for (let i = 0; i < suggest.length; i++) {
     let objectDataSuggest;
-    suggest[i].addEventListener("click", () => {
-      // console.log(suggest[i].innerText);
+    suggest[i].addEventListener("click", async () => {
       objectDataSuggest = convertText(`${suggest[i].innerText}`);
       objectDataSuggest = `<div class="suggest-food">😋 Ăn gì vào thơì tiết như này nhỉ ?
-                              <div class="result-suggest"> - ${objectDataSuggest.suggestFood}.</div>
-                           </div>
-                           <div class="suggest-address">🚗 Đi đâu vào thời tiết như này ?
-                              <div class="result-suggest"> - ${objectDataSuggest.suggestAddress}.</div>
-                           </div>
-                           <div class="suggest-recommend">💡 Lưu ý nhé !
-                              <div class="result-suggest"> - ${objectDataSuggest.recommend}.</div>
-                           </div>`;
+                                <div class="result-suggest"> - ${objectDataSuggest.suggestFood}.</div>
+                             </div>
+                             <div class="suggest-address">🚗 Đi đâu vào thời tiết như này ?
+                                <div class="result-suggest"> - ${objectDataSuggest.suggestAddress}.</div>
+                             </div>
+                             <div class="suggest-recommend">💡 Lưu ý nhé !
+                                <div class="result-suggest"> - ${objectDataSuggest.recommend}.</div>
+                             </div>`;
+      // console.log(suggest[i].innerText);
       dataSuggest.innerHTML = objectDataSuggest;
+      // dataSuggest.innerHTML = `<div class="suggest-food">Đợi chút nha!</div>`;
     });
   }
 };
