@@ -1946,7 +1946,7 @@ Account
 
 .card-header {
   background: #021622;
-  padding: 60px 40px;
+  padding: 40px 20px;
 }
 
 .pic {
@@ -2309,5 +2309,19 @@ Contact
   }
   .forecast-container .forecast .forecast-content .degree-mar {
     font-size: 1em;
+  }
+}
+
+/* @media (max-height: 715px) {
+  .profile-card .card-header{
+    padding: 30px 20px;
+  }
+} */
+@media (max-height: 780px) {
+  .contact-form textarea {
+    min-height: 45px
+  }
+  .modal-dialog {
+    margin: 3rem;
   }
 }

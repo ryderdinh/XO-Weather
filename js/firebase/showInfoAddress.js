@@ -183,7 +183,6 @@ let renderActionModal = function () {
 var suggestShow = function () {
   let suggest = document.getElementsByClassName("suggest");
   let dataSuggest = document.getElementById("data-suggest");
-  console.log(suggest);
   for (let i = 0; i < suggest.length; i++) {
     let objectDataSuggest;
     suggest[i].addEventListener("click", () => {
