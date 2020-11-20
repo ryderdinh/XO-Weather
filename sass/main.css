@@ -1,0 +1,76 @@
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+#myMenu li a:hover {
+  background-color: rgba(238, 238, 238, 0.425);
+}
+
+#results {
+  background-color: #1e202b;
+  height: 25vh;
+  overflow-y: scroll;
+}
+
+.find-location {
+  margin-bottom: 0 !important;
+}
+
+form input {
+  border-radius: 20px 3px 20px 3px;
+}
+
+#results::-webkit-scrollbar {
+  width: 10px;
+}
+
+#results::-webkit-scrollbar-track {
+  background-color: #282731;
+}
+
+#results::-webkit-scrollbar-thumb {
+  background: #dbd9d9;
+}
+
+#result::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.inputfix {
+  border-radius: 20px 3px 0px 3px;
+  -webkit-transition: border-radius,linear,0.7s;
+  transition: border-radius,linear,0.7s;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .forecast-container .forecast {
+    display: block;
+    width: calc(100% / 2);
+    float: left;
+  }
+}
+/*# sourceMappingURL=main.css.map */

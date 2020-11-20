@@ -1,2 +1,2 @@
-# XO-Weather(backup)
- 
+# Weather-project
+MindX final project

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./style/sign.css">
+    <style>
+		.loader-wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			background-color: white;
+			width: 100vw;
+			height: 100vh;
+			z-index: 1031;
+		}
+
+		#firstLottie {
+			width: 25vw;
+			height: 25vh;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			margin: auto;
+		}
+	</style>
+</head>
+
+<body>
+	
+    <section>
+        <div class="container">
+            <div class="user sign-in-box">
+                <div class="img-box">
+                    <img src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                        alt="">
+                </div>
+                <div class="form-box">
+                    <form id="login-form">
+                        <h2>Đăng Nhập</h2>
+                        <input type="email" id="login-email" placeholder="Email">
+                        <input type="password" id="login-password" placeholder="Mật khẩu">
+                        <div class="btn-trans1" id="btn-login">
+                            <a href="">
+                                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </a>
+                        </div>
+                        <p class="sign-up">Bạn chưa có tài khoản ?
+                            <a href="" class="toggleFunc">Đăng kí</a>
+                        </p>
+                        <p class="sign-up">
+                            <a href="">Quên mật khẩu ?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="user sign-up-box">
+                <div class="form-box">
+                    <form id="signup-form">
+                        <h2>Tạo tài khoản</h2>
+                        <input type="text" id="signup-name" placeholder=" Họ và tên">
+                        <input type="email" id="signup-email" placeholder="Địa chỉ email">
+                        <input type="password" id="signup-password" placeholder="Mật khẩu">
+                        <input type="password" id="signup-repassword" placeholder="Xác nhận mật khẩu">
+                        <div class="btn-trans1" id="btn-signup">
+                            <a href="">
+                                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </a>
+                        </div>
+                        <p class="sign-up">Bạn đã có tài khoản ?
+                            <a href="" class="toggleFunc">Đăng nhập</a>
+                        </p>
+                    </form>
+                </div>
+                <div class="img-box">
+                    <img src="https://images.pexels.com/photos/848117/pexels-photo-848117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIREBASE -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD4cRP-5D7g0X2CcKK1zYxp5U8tDkxgX00",
+            authDomain: "weather-c12d2.firebaseapp.com",
+            databaseURL: "https://weather-c12d2.firebaseio.com",
+            projectId: "weather-c12d2",
+            // storageBucket: "weather-c12d2.appspot.com",
+            // messagingSenderId: "342820366738",
+            appId: "1:342820366738:web:fd95dc766052cbaec0794b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Make auth and firestore
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="./js/firebase/auth.js"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>

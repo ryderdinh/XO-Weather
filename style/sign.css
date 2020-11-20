@@ -1,0 +1,211 @@
+@font-face {
+  font-family: beVn;
+  src: url(../fonts/BeVietnam-Medium.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: beVn;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  background: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container .user .img-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #ff0;
+  transition: 0.5s;
+}
+
+.container .user .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .user .form-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.container .user .form-box form h2 {
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.container .user .form-box form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 10px 0;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 320;
+}
+
+.container .user .form-box form .btn-trans1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.container .user .form-box form .btn-trans1 a {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 55px;
+  margin: 10px;
+  text-transform: uppercase;
+  background-color: #191919;
+  border-radius: 2px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+.container .user .form-box form .btn-trans1 a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: 0s ease-in;
+}
+.container .user .form-box form .btn-trans1 a span i {
+    font-size: 40px;
+}
+.container .user .form-box form .btn-trans1 a:hover span {
+  transform: translateY(-100%);
+  transition: 0.4s ease-in;
+}
+.container .user .form-box form .btn-trans1 a:before {
+  content: "";
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background-color: rgb(240, 58, 58);
+  border-radius: 50%;
+  transition: 0.4s ease-in;
+}
+.container .user .form-box form .btn-trans1 a:hover:before {
+  bottom: -150px;
+}
+
+.container .user .form-box form .sign-up {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 310;
+}
+.container .user .form-box form .sign-up a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+/* ADD-ANI */
+
+.container .sign-in-box .form-box {
+    left: 0;
+}
+.container .sign-in-box .img-box {
+    left: 0;
+}
+.container.active .sign-in-box .form-box {
+    left: -100%;
+}
+.container.active .sign-in-box .img-box {
+    left: 100%;
+}
+.container .sign-up-box {
+    pointer-events: none;
+}
+.container .sign-up-box .form-box {
+    left: 100%;
+}
+.container .sign-up-box .img-box {
+    left: -100%;
+}
+.container.active .sign-up-box {
+    pointer-events: initial;
+}
+.container.active .sign-up-box .form-box {
+    left: 0;
+}
+.container.active .sign-up-box .img-box {
+    left: 0;
+}
+
+/*=========================================== 
+ * Pesponsive
+ *===========================================*/
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 400px;
+    }
+    .container .img-box {
+        display: none;
+    }
+    .container .form-box {
+        width: 100% !important;
+    }
+}
