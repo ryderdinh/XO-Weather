@@ -95,7 +95,7 @@ async function myFunction() {
 async function SearchByKeywordAPICall(keyword) {
   await axios
     .get(
-      `http://api.weatherapi.com/v1/search.json?key=7b5133a15d544fd2938162305201910&q=${keyword}&lang=vi`
+      `https://api.weatherapi.com/v1/search.json?key=1f4e25194f3f4b49a42153456201910&q=${keyword}&lang=vi`
     )
     .then(function (response) {
       // console.log(response.data);
@@ -120,7 +120,7 @@ async function SearchByKeywordAPICall(keyword) {
 async function SearchByGPSAPICall(LocationDetail) {
   await axios
     .get(
-      `http://api.weatherapi.com/v1/search.json?key=7b5133a15d544fd2938162305201910&q=${LocationDetail.latitude},${LocationDetail.longitude}&lang=vi`
+      `https://api.weatherapi.com/v1/search.json?key=1f4e25194f3f4b49a42153456201910&q=${LocationDetail.latitude},${LocationDetail.longitude}&lang=vi`
     )
     .then(function (response) {
       let data = response.data;
@@ -155,7 +155,8 @@ async function GetWeatherForecast(event, element, LocationDetail) {
   if (element) {
     id = element.getAttribute("id");
     document.querySelector("#results").style.display = "none";
-    document.querySelector(".inputfix").style.borderRadius = "20px 3px 20px 3px !important";
+    document.querySelector(".inputfix").style.borderRadius =
+      "20px 3px 20px 3px !important";
     // db.collection("Users").doc(id).update({find: })
     //lay ra lat lon khi click vao dia chi o Search, sang addUserAddress.js
     for (let i = 0; i < id.length; i++) {
@@ -168,7 +169,7 @@ async function GetWeatherForecast(event, element, LocationDetail) {
 
     await axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=7b5133a15d544fd2938162305201910&q=${id}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=1f4e25194f3f4b49a42153456201910&q=${id}&days=3`
       )
       .then(function (response) {
         // console.log(response.data);
@@ -193,7 +194,7 @@ async function GetWeatherForecast(event, element, LocationDetail) {
   if (LocationDetail) {
     await axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=7b5133a15d544fd2938162305201910&q=${LocationDetail.latitude},${LocationDetail.longitude}&days=3`
+        `https://api.weatherapi.com/v1/forecast.json?key=1f4e25194f3f4b49a42153456201910&q=${LocationDetail.latitude},${LocationDetail.longitude}&days=3`
       )
       .then(function (response) {
         // console.log(response.data);
@@ -213,7 +214,7 @@ async function GetWeatherForecast(event, element, LocationDetail) {
 async function getJSONAPI(lat, lon) {
   await axios
     .get(
-      `http://api.weatherapi.com/v1/forecast.json?key=7b5133a15d544fd2938162305201910&q=${lat},${lon}&days=3`
+      `https://api.weatherapi.com/v1/forecast.json?key=1f4e25194f3f4b49a42153456201910&q=${lat},${lon}&days=3`
     )
     .then((response) => {
       let data = response.data;
