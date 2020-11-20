@@ -2084,7 +2084,7 @@ Account
 .suggest-table #data-suggest {
   overflow-x: hidden;
   overflow-y: auto;
-  height: 70%;
+  height: 60%;
 }
 .edit-table .section-title,
 .suggest-table .section-title {
