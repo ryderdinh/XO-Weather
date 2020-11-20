@@ -154,7 +154,7 @@ let renderActionModal = function () {
       <div class="local-name-data">${i}. ${address} 
         <input type="checkbox" aria-label="Checkbox for following text input" value="${
           i - 1
-        }" class="local-index">
+        }" class="local-index is-completed">
       </div>`;
     i++;
   }
@@ -176,8 +176,17 @@ let renderActionModal = function () {
       }
     });
   }
+  (() => {
+    document.getElementById("not-check").addEventListener("click", () => {
+      let fake = document.querySelectorAll(".is-completed");
+      fake.forEach((e) => {
+        if (e.checked) {
+          e.checked = false;
+        }
+      });
+    });
+  })();
 };
-
 // let renderEditModal = function () {};
 
 var suggestShow = function () {
