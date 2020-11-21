@@ -1981,6 +1981,7 @@ template.render = function (data) {
   // HTML = dữ liệu ngày hôm nay + n dữ liệu forecast
   // làm được cái template dữ liệu rồi thì gắn vào innerhtml render ra màn hình
   forcastContainerResult.innerHTML = html;
+  console.log(forcastContainerResult)
 
   // console.log(this.forcastTable)
 };

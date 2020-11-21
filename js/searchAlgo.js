@@ -198,7 +198,7 @@ async function GetWeatherForecast(event, element, LocationDetail) {
       )
       .then(function (response) {
         // console.log(response.data);
-        // console.log(response);
+        console.log(response);
         let data = response.data;
         template.render(data);
       })

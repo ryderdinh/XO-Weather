@@ -1731,7 +1731,7 @@ header.sticky {
 .forecast-table.search-results {
   padding-top: 50px;
   position: relative;
-  display: none;
+  /* display: none; */
 }
 .forecast-table .title-result {
   top: -50px;
