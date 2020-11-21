@@ -205,9 +205,7 @@ var suggestShow = function () {
                              <div class="suggest-recommend">💡 Lưu ý nhé !
                                 <div class="result-suggest"> - ${objectDataSuggest.recommend}.</div>
                              </div>`;
-      // console.log(suggest[i].innerText);
       dataSuggest.innerHTML = objectDataSuggest;
-      // dataSuggest.innerHTML = `<div class="suggest-food">Đợi chút nha!</div>`;
     });
   }
 };

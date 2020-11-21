@@ -43,28 +43,47 @@ form input {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
-.inputfix{
+.inputfix {
   border-radius: 20px 3px 0px 3px;
-  transition: border-radius,linear,0.7s;
+  transition: border-radius, linear, 0.7s;
 }
 .modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .forecast-container .forecast {
-      display: block;
-      width: calc(100% / 2);
-      float: left;
+    display: block;
+    width: calc(100% / 2);
+    float: left;
   }
-
+  #results {
+    max-width: 94.5%;
+  }
 }
 .info-contact-card {
-    background: #021622;
+  background: #021622;
+}
+
+@media screen and (max-width: 368px) {
+  #results {
+    max-width: 91%;
+  }
+}
+@media screen and (min-width: 770px) {
+  #results {
+    max-width: 96%;
+  }
+}
+@media (min-width: 992px) {
+  #results {
+    min-width: 97%;
+    max-width: 97.5%;
+  }
 }

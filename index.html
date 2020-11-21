@@ -8,6 +8,7 @@
 
 	<title>XO Weather</title>
 
+	<link rel="icon" type="image/png" href="./images/icon-compass.png">
 	<!-- Loading third party fonts -->
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
@@ -113,15 +114,19 @@
 		</header>
 
 
-
+		<script>
+			function preventDefaultSubmit(e){
+				e.preventDefault();
+			}
+		</script>
 		<div class="hero">
-			<div class="container searchbox">
+			<div class="container searchbox" style="position: relative;">
 				<form action="#" class="find-location">
 					<input id="mySearch" type="text" placeholder="Nhập vị trí..." onchange="myFunction()"
 						onfocus="showResults()" onblur="hideResults() " autocomplete="off">
 					<div class="action-local">
-						<input type="submit" onclick="getLocation(event),showResults()" value="Định vị">
-						<input type="submit" onclick="myFunction(),showResults(event)" value="Tìm kiếm">
+						<input type="submit" onclick="getLocation(event),showResults()" onsubmit="preventDefaultSubmit(event)" value="Định vị">
+						<input type="submit" onclick="myFunction(),showResults(event)"  value="Tìm kiếm">
 
 						<!-- <option value="">
 
@@ -129,25 +134,14 @@
 					</div>
 				</form>
 				<div class="btn-group ">
-					<div class="btn btn-success" onclick="RealTimeSearch()">Enable Realtime Search</div>
-					<div class="btn btn-success" onclick="DisableRealTimeSearch()">Disable Realtime Search</div>
+					<div class="btn btn-secondary" onclick="RealTimeSearch()" >Enable Realtime Search</div>
+					<div class="btn btn-secondary" onclick="DisableRealTimeSearch()" >Disable Realtime Search</div>
 				</div>
-				<div id="results" class="d-none" style="z-index: 1;">
+				<div id="results" class="d-none" style="z-index: 1; position: absolute; width: 100%;">
 					<ul id="myMenu">
 						<li><a href="#" style="display: none;">HTML</a></li>
-						<!-- <li><a href="#">CSS</a></li>
-						<li><a href="#">JavaScript</a></li>
-						<li><a href="#">PHP</a></li>
-						<li><a href="#">Python</a></li>
-						<li><a href="#">jQuery</a></li>
-						<li><a href="#">SQL</a></li>
-						<li><a href="#">Bootstrap</a></li>
-						<li><a href="#">Node.js</a></li> -->
 					</ul>
 				</div>
-				<!-- <div class="btn btn-success">
-					sss
-				</div> -->
 			</div>
 		</div>
 
@@ -306,7 +300,7 @@
 			class="login-link-out">
 			<div class="toast" style="position: absolute; top: 0; right: 0;">
 				<div class="toast-header">
-					<img src="..." class="rounded mr-2" alt="...">
+					<img src="#" class="rounded mr-2" alt="...">
 					<strong class="mr-auto">Bootstrap</strong>
 					<small>11 mins ago</small>
 					<button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -359,7 +353,20 @@
 	<script src="./js/extension.js"></script>
 	<script src="./js/cache.js"></script>
 	<script src="js/app.js" type="module"></script>
-
+	<script>
+		window.onload = function () {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function (position) {
+						LocationDetail.longitude = position.coords.longitude;
+						LocationDetail.latitude = position.coords.latitude;
+						console.log(LocationDetail);
+						GetWeatherForecast(false, false, LocationDetail);
+					});
+				} else {
+					alert("Geolocation is not supported by this browser.");
+				}
+			};
+	</script>
 
 </body>
 

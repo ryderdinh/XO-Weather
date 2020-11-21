@@ -4,41 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signin and Signup</title>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="./style/sign.css">
-    <style>
-		.loader-wrapper {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			background-color: white;
-			width: 100vw;
-			height: 100vh;
-			z-index: 1031;
-		}
+	<link rel="icon" type="image/png" href="./images/icon-compass.png">
 
-		#firstLottie {
-			width: 25vw;
-			height: 25vh;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			margin: auto;
-		}
-	</style>
+    <link rel="stylesheet" href="./style/sign.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+        <script src="@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+        <script src="@lottiefiles\lottie-interactivity\dist\lottie-interactivity.min.js"></script>
+<style>
+    .loader-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1031;
+    }
+
+    #firstLottie {
+        width: 25vw;
+        height: 25vh;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: auto;
+    }
+</style>
 </head>
 
 <body>
-	
-    <section>
+	   <!-- Loader -->
+    <div class="fixed-top loader-wrapper">
+        <lottie-player id="firstLottie" background="transparent" speed="1" loop autoplay mode="normal"></lottie-player>
+        <script src="./Data/Animation.js"></script>
+        <script>
+            const animation = document.querySelector("#firstLottie");
+            animation.load(AnimationData)
+            setTimeout(function () {
+                $(".loader-wrapper").fadeOut(1000)
+                $('#maincontent').css('display','flex')
+            }, 2500)
+        </script>
+    </div>
+    
+    <!-- End Loader -->
+    <section id="maincontent" style="display:none">
         <div class="container">
             <div class="user sign-in-box">
                 <div class="img-box">
-                    <img src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    <img src="https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                         alt="">
                 </div>
                 <div class="form-box">
@@ -81,7 +101,7 @@
                     </form>
                 </div>
                 <div class="img-box">
-                    <img src="https://images.pexels.com/photos/848117/pexels-photo-848117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    <img src="https://images.unsplash.com/photo-1514632595-4944383f2737?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                         alt="">
                 </div>
             </div>
@@ -117,6 +137,14 @@
     </script>
     <script src="./js/firebase/auth.js"></script>
     <script src="./js/app.js" type="module"></script>
+    <script>
+       const player = document.querySelector("#firstLottie");
+        player.load(AnimationData)
+        setTimeout(function () {
+            $(".loader-wrapper").fadeOut(1000)
+            $('#maincontent').css('display','flex')
+        }, 2500)
+    </script>
 </body>
 
 </html>

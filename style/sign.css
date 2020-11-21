@@ -12,7 +12,7 @@
 section {
   position: relative;
   min-height: 100vh;
-  background: url(https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-image: url('https://i2.wp.com/ouriac.ca/wp-content/uploads/2019/06/clear-blue-sky.jpeg?ssl=1');
   background-size: cover;
   display: flex;
   justify-content: center;

@@ -72,5 +72,31 @@ input:-webkit-autofill:focus {
     width: calc(100% / 2);
     float: left;
   }
+  #results {
+    max-width: 94.5%;
+  }
+}
+
+.info-contact-card {
+background: #021622;
+}
+
+@media screen and (max-width: 368px) {
+#results {
+  max-width: 91%;
+}
+}
+
+@media screen and (min-width: 770px) {
+#results {
+  max-width: 96%;
+}
+}
+
+@media (min-width: 992px) {
+#results {
+  min-width: 97%;
+  max-width: 97.5%;
+}
 }
 /*# sourceMappingURL=main.css.map */
