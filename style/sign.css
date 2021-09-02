@@ -12,7 +12,7 @@
 section {
   position: relative;
   min-height: 100vh;
-  background-image: url('https://i2.wp.com/ouriac.ca/wp-content/uploads/2019/06/clear-blue-sky.jpeg?ssl=1');
+  background-image: url("../images/pexels-josh-sorenson-1154510.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -98,7 +98,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 .container .user .form-box form .btn-trans1 a {
   position: relative;
@@ -125,7 +124,7 @@ section {
   transition: 0s ease-in;
 }
 .container .user .form-box form .btn-trans1 a span i {
-    font-size: 40px;
+  font-size: 40px;
 }
 .container .user .form-box form .btn-trans1 a:hover span {
   transform: translateY(-100%);
@@ -165,47 +164,47 @@ section {
 /* ADD-ANI */
 
 .container .sign-in-box .form-box {
-    left: 0;
+  left: 0;
 }
 .container .sign-in-box .img-box {
-    left: 0;
+  left: 0;
 }
 .container.active .sign-in-box .form-box {
-    left: -100%;
+  left: -100%;
 }
 .container.active .sign-in-box .img-box {
-    left: 100%;
+  left: 100%;
 }
 .container .sign-up-box {
-    pointer-events: none;
+  pointer-events: none;
 }
 .container .sign-up-box .form-box {
-    left: 100%;
+  left: 100%;
 }
 .container .sign-up-box .img-box {
-    left: -100%;
+  left: -100%;
 }
 .container.active .sign-up-box {
-    pointer-events: initial;
+  pointer-events: initial;
 }
 .container.active .sign-up-box .form-box {
-    left: 0;
+  left: 0;
 }
 .container.active .sign-up-box .img-box {
-    left: 0;
+  left: 0;
 }
 
 /*=========================================== 
  * Pesponsive
  *===========================================*/
 @media screen and (max-width: 991px) {
-    .container {
-        max-width: 400px;
-    }
-    .container .img-box {
-        display: none;
-    }
-    .container .form-box {
-        width: 100% !important;
-    }
+  .container {
+    max-width: 400px;
+  }
+  .container .img-box {
+    display: none;
+  }
+  .container .form-box {
+    width: 100% !important;
+  }
 }
